@@ -6,9 +6,13 @@ g++ -Wall ./src/*.cpp -o test
 # test si erreur compilation :
 if [ $? -ne 0 ]
 then
-echo '\n --------------------------------------------------- \n erreur a la compilation !!! \n'
-return -1;
+ echo ' erreur a la compilation !!! '
+ exit -1;
 fi
 
 # nettoyage :
-rm -f *.o
+rm -f ./src/*.o
+
+echo ' compilation réussie  \o/ '
+
+exit 0

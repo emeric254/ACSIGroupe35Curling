@@ -1,27 +1,22 @@
 
 #include "parseurFic.h"
-#include <iostream>
-#include <fstream>
 
-using namespace std;
+using namespace std; // pour éviter d'écrire 'std::' à chaque fois
 
 void parseurFic::lireFic(string nomFic)
 {
-    ifstream fluxFic; // ouverture en lecture
-
     fluxFic.open(nomFic.c_str()); // ouverture du fichier de nom contenu dans 'nomFic'
 
     if(fluxFic) // si bien ouvert
     {
-      string ligne;
+      while ( getline(fluxFic, temp) ) {
 
-      while ( getline(fluxFic, ligne) ) {
-         cout << ligne << endl;
+         cout << temp << endl; /** @TODO : à virer pour le respect du MVC ! xD **/
+
          // ---- traitement :
-         // @TODO : récupérer dans la ligne l'url puis ajouter ça a tabString
+         /** @TODO : récupérer dans la ligne l'url puis ajouter ça a tabString **/
 
       }
-
       fluxFic.close();
     }
     else

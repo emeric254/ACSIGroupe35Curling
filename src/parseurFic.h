@@ -5,16 +5,16 @@
 #include <fstream>
 #include <string>
 
-
-
 class parseurFic {
 
     public :
         void lireFic(std::string nomFic);
-        // @TODO : tabString;
 
     private :
-        std::string temp; // il faudrait un tableau de string a redonner a la fin ;)
+        std::string temp;
+        std::ifstream fluxFic;
+
+        /** @TODO : il faudrait une structure a retourner en fin de lecture **/
 };
 
 
