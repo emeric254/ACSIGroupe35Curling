@@ -24,7 +24,7 @@ int main(int argc, char **argv)
         return -1;
     }
 
-/** @TODO : au final on vire tout les std::cout pour les remplacer par une classe "VUE" qui sert a gérer tout l'affichage ;) **/
+//** TODO : au final on vire tout les std::cout pour les remplacer par une classe "VUE" qui sert a gérer tout l'affichage ;) **/
 
     return 0;
 }
