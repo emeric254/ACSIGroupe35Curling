@@ -6,14 +6,23 @@
 
 int main(int argc, char **argv)
 {
-	parseurFic testParseur;
-    std::cout << "Plop du main !" << std::endl;
-    testParseur.test();
+    parseurFic testParseur;
     std::string fichier;
-    if(argc>1) fichier=argv[1];
-    else fichier="parseurFic.cpp";
-    std::cout << "On va maintenant lire le fichier : " << fichier << std::endl;
-    testParseur.lireFic(fichier);
-    std::cout << "fin !" << std::endl;
+
+    if(argc>1){
+         fichier=argv[1];
+        try {
+			std::cout << "liste des URL contenues dans ce fichier  : " << fichier << std::endl;
+			testParseur.lireFic(fichier);
+		}
+		catch (std::string const& chaineErr){
+			std::cerr << chaineErr << std::endl;
+			return -2;
+		}
+    } else {
+        std::cout << "aucun paramètre !  " << std::endl;
+        return -1;
+	}
+
     return 0;
-}		
+}

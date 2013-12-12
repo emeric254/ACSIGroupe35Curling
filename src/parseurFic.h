@@ -9,12 +9,12 @@
 
 class parseurFic {
 
-	public :
-		void test();
-		void lireFic(std::string nomFic);
-		
-	private :
-		std::string temp;
+    public :
+        void lireFic(std::string nomFic);
+        // @TODO : tabString;
+
+    private :
+        std::string temp; // il faudrait un tableau de string a redonner a la fin ;)
 };
 
 
