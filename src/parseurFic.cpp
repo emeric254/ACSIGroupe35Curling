@@ -13,9 +13,9 @@ void parseurFic::lireFic(string nomFic)
 
          cout << temp << endl; //** TODO : à virer pour le respect du MVC ! xD **/
 
-         // ---- traitement :
-         //** TODO : récupérer dans la ligne l'url puis ajouter ça a tabString **/
-
+        // ---- traitement :
+        //** TODO : récupérer dans la ligne l'url puis ajouter ça a tabString **/
+		
       }
       fluxFic.close();
     }
