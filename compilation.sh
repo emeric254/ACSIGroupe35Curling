@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # compilation :
-g++ -Wall ./src/*.cpp -o progTest
+g++ -std=c++11 -Wall ./src/*.cpp -o progTest
 
 # test si erreur compilation :
 if [ $? -ne 0 ]

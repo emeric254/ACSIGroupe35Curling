@@ -14,15 +14,16 @@ void parseurFic::lireFic(string nomFic)
          cout << temp << endl; //** TODO : à virer pour le respect du MVC ! xD **/
 
         // ---- traitement :
-        //** TODO : récupérer dans la ligne l'url puis ajouter ça a tabString **/
-		
+        //** TODO : récupérer dans la ligne l'url (si il y en a une) puis l'ajouter à tabString **/
+        
       }
       fluxFic.close();
     }
     else
-        throw string("ERREUR: Impossible d'ouvrir et de lire le fichier  "+nomFic); // erreur a gérer
+        throw string("ERREUR: Impossible d'ouvrir et de lire le fichier : "+nomFic); // erreur a gérer
 }
 
 void parseurFic::getUrls(){
     //** TODO **/
+//	return tabString;
 }
