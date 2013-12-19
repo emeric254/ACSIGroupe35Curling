@@ -1,4 +1,4 @@
-.TH "parseurFic" 3 "Fri Dec 13 2013" "ACSIGroupe35Curling" \" -*- nroff -*-
+.TH "parseurFic" 3 "Thu Dec 19 2013" "ACSIGroupe35Curling" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -14,6 +14,14 @@ classe représentant le parseur de fichier
 .SS "Public Member Functions"
 
 .in +1c
+.ti -1c
+.RI "void \fBlireFic\fP (std::string nomFic)"
+.br
+.RI "\fIlis le fichier et y prend les url \fP"
+.ti -1c
+.RI "void \fBgetUrls\fP ()"
+.br
+.RI "\fIretourne les url lues \fP"
 .ti -1c
 .RI "void \fBlireFic\fP (std::string nomFic)"
 .br
@@ -41,6 +49,28 @@ le tableau d'url
 .RE
 .PP
 Fonction qui retourne les url lues dans un fichier au préalable 
+.SS "void parseurFic::getUrls ()"
+
+.PP
+retourne les url lues 
+.PP
+\fBReturns:\fP
+.RS 4
+le tableau d'url
+.RE
+.PP
+Fonction qui retourne les url lues dans un fichier au préalable 
+.SS "void parseurFic::lireFic (std::stringnomFic)"
+
+.PP
+lis le fichier et y prend les url 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInomFic\fP : le fichier a lire
+.RE
+.PP
+Méthode qui lis le fichier passé en paramètre et accumule les url qu'il y trouve 
 .SS "void parseurFic::lireFic (std::stringnomFic)"
 
 .PP

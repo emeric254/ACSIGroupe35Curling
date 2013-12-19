@@ -17,7 +17,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"_curling_2listeur_fic_8h_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
