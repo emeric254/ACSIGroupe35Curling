@@ -16,6 +16,7 @@
 #include <fstream>
 #include <string>
 #include <QRegExp>
+#include <QtCore>
 
 /*!
    * \class parseurFic
@@ -47,10 +48,18 @@ class parseurFic {
      */
         void getUrls(); //** TODO cette fonction doit retourner une structure/tableau d'url **/
 
+      /*!
+      *  \brief test les url avec wget
+      *
+      *  Fonction qui test les url lues avec wget
+      *
+      */
+        void testUrls();
+
     private :
         std::string temp; /*!< ligne temporaire qui est lue dans le fichier */
         std::ifstream fluxFic; /*!< descripteur de fichier ouvert en lecture */
-        QRegExp rx;
+        QRegExp rx; /*!< l'expression reguliere */
         //** TODO : il faudrait une structure/tableau d'url **/
 };
 
