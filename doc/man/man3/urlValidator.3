@@ -1,0 +1,68 @@
+.TH "urlValidator" 3 "Fri Dec 20 2013" "ACSIGroupe35Curling" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+urlValidator \- 
+.PP
+classe représentant le valideur d(e fichier d'URL  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <urlvalidator\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBtestStruct\fP (std::string pURL)"
+.br
+.RI "\fItest si l'url est bien structurée \fP"
+.ti -1c
+.RI "bool \fBtestVie\fP (std::string pURL)"
+.br
+.RI "\fIretourne les url lues \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+classe représentant le valideur d(e fichier d'URL 
+
+classe gérant les tests appliqués à une URL 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool urlValidator::testStruct (std::stringpURL)"
+
+.PP
+test si l'url est bien structurée 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpURL\fP : la chaine de caractere representant l'URL 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+booleen : Vrai si l'URL est bien structurée, sinon Faux
+.RE
+.PP
+Fonction qui test si l'URL est bien construite et structurée grace à une expression régulière 
+.SS "bool urlValidator::testVie (std::stringpURL)"
+
+.PP
+retourne les url lues 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpURL\fP : la chaine de caractere representant l'URL 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+le tableau d'url
+.RE
+.PP
+Fonction qui test si l'URL est bien vivante et accessible grace à une utilisation d'une commande utilisant 'wget' (mode '--spider') 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ACSIGroupe35Curling from the source code\&.

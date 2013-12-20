@@ -17,7 +17,9 @@ TEMPLATE = app
 
 SOURCES += main.cpp \
            parseurFic.cpp \
-           listeurFic.cpp
+           listeurFic.cpp \
+    urlvalidator.cpp
 
 HEADERS += parseurFic.h \
-           listeurFic.h
+           listeurFic.h \
+    urlvalidator.h

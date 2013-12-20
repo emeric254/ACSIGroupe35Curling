@@ -1,4 +1,4 @@
-.TH "parseurFic" 3 "Thu Dec 19 2013" "ACSIGroupe35Curling" \" -*- nroff -*-
+.TH "parseurFic" 3 "Fri Dec 20 2013" "ACSIGroupe35Curling" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -22,6 +22,10 @@ classe représentant le parseur de fichier
 .RI "void \fBgetUrls\fP ()"
 .br
 .RI "\fIretourne les url lues \fP"
+.ti -1c
+.RI "void \fBtestUrls\fP ()"
+.br
+.RI "\fItest les url avec wget \fP"
 .ti -1c
 .RI "void \fBlireFic\fP (std::string nomFic)"
 .br
@@ -81,7 +85,11 @@ lis le fichier et y prend les url
 \fInomFic\fP : le fichier a lire
 .RE
 .PP
-Méthode qui lis le fichier passé en paramètre et accumule les url qu'il y trouve 
+Méthode qui lis le fichier passé en paramètre et accumule les url qu'il en trouve 
+.SS "void parseurFic::testUrls ()"
+
+.PP
+test les url avec wget Fonction qui test les url lues avec wget 
 
 .SH "Author"
 .PP 

@@ -15,8 +15,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <QRegExp>
 #include <QtCore>
+#include "urlvalidator.h"
 
 /*!
    * \class parseurFic
@@ -34,7 +34,7 @@ class parseurFic {
      *  \brief lis le fichier et y prend les url
      *  \param nomFic : le fichier a lire
      *
-     *  Méthode qui lis le fichier passé en paramètre et accumule les url qu'il y trouve
+     *  Méthode qui lis le fichier passé en paramètre et accumule les url qu'il en trouve
      *
      */
         void lireFic(std::string nomFic);
@@ -59,8 +59,7 @@ class parseurFic {
     private :
         std::string temp; /*!< ligne temporaire qui est lue dans le fichier */
         std::ifstream fluxFic; /*!< descripteur de fichier ouvert en lecture */
-        QRegExp rx; /*!< l'expression reguliere */
-        //** TODO : il faudrait une structure/tableau d'url **/
+        urlValidator testeurURL;
 };
 
 
