@@ -1,4 +1,4 @@
-.TH "listeurFic" 3 "Fri Dec 20 2013" "ACSIGroupe35Curling" \" -*- nroff -*-
+.TH "listeurFic" 3 "Tue Dec 24 2013" "ACSIGroupe35Curling" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -16,56 +16,56 @@ listeurFic \-
 .br
 .RI "\fIliste les fichiers d'un dossier \fP"
 .ti -1c
-.RI "std::string * \fBgetListe\fP ()"
+.RI "QFileInfoList \fBgetListe\fP ()"
 .br
-.RI "\fIretourne les noms/chemins fichiers listés \fP"
+.RI "\fIretourne la liste des fichiers listés \fP"
 .ti -1c
-.RI "void \fBlister\fP (std::string nomDossier)"
+.RI "QStringList \fBgetQStringListe\fP ()"
 .br
-.RI "\fIliste les fichiers d'un dossier \fP"
+.RI "\fIretourne la liste des chemins des fichiers listés \fP"
 .ti -1c
-.RI "std::string * \fBgetListe\fP ()"
+.RI "std::list< std::string > \fBgetStringListe\fP ()"
 .br
-.RI "\fIretourne les noms/chemins fichiers listés \fP"
+.RI "\fIretourne la liste des chemins des fichiers listés \fP"
 .in -1c
 .SH "Detailed Description"
 .PP 
 classe \&.\&.\&. 
 .SH "Member Function Documentation"
 .PP 
-.SS "string * listeurFic::getListe ()"
+.SS "QFileInfoList listeurFic::getListe ()"
 
 .PP
-retourne les noms/chemins fichiers listés 
+retourne la liste des fichiers listés 
 .PP
 \fBReturns:\fP
 .RS 4
-le tableau des nom/chemins des fichiers listés
+la liste des fichiers listés
 .RE
 .PP
 Fonction qui retourne la liste des fichiers 
-.SS "std::string* listeurFic::getListe ()"
+.SS "QStringList listeurFic::getQStringListe ()"
 
 .PP
-retourne les noms/chemins fichiers listés 
+retourne la liste des chemins des fichiers listés 
 .PP
 \fBReturns:\fP
 .RS 4
-le tableau des nom/chemins des fichiers listés
+le tableau des QString/chemins des fichiers listés
 .RE
 .PP
 Fonction qui retourne la liste des fichiers 
-.SS "void listeurFic::lister (std::stringnomDossier)"
+.SS "list< string > listeurFic::getStringListe ()"
 
 .PP
-liste les fichiers d'un dossier 
+retourne la liste des chemins des fichiers listés 
 .PP
-\fBParameters:\fP
+\fBReturns:\fP
 .RS 4
-\fInomDossier\fP : le fichier a lire
+le tableau de std::string/chemins des fichiers listés
 .RE
 .PP
-Méthode qui liste les fichiers dans un dossier dont le nom est donné en paramètre (nomDossier) 
+Fonction qui retourne la liste des fichiers 
 .SS "void listeurFic::lister (std::stringnomDossier)"
 
 .PP

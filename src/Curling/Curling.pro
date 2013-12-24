@@ -6,7 +6,7 @@
 
 QT       += core
 
-QT       -= gui
+QT       += gui
 
 TARGET = Curling
 CONFIG   += console
@@ -18,8 +18,10 @@ TEMPLATE = app
 SOURCES += main.cpp \
            parseurFic.cpp \
            listeurFic.cpp \
-    urlvalidator.cpp
+    urlvalidator.cpp \
+    vue.cpp
 
 HEADERS += parseurFic.h \
            listeurFic.h \
-    urlvalidator.h
+    urlvalidator.h \
+    vue.h

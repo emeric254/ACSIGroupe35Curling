@@ -15,6 +15,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <QtCore>
+#include <QtGui/QtGui>
 
 
 /*!
@@ -38,19 +40,38 @@ class listeurFic {
         void lister(std::string nomDossier);
 
     /*!
-     *  \brief retourne les noms/chemins fichiers listés
-     *  \return le tableau des nom/chemins des fichiers listés
+     *  \brief retourne la liste des fichiers listés
+     *  \return la liste des fichiers listés
      *
      *  Fonction qui retourne la liste des fichiers
      *
      */
-        std::string * getListe(); //** TODO **/
+        QFileInfoList getListe();
+
+    /*!
+     *  \brief retourne la liste des chemins des fichiers listés
+     *  \return le tableau des QString/chemins des fichiers listés
+     *
+     *  Fonction qui retourne la liste des fichiers
+     *
+     */
+        QStringList getQStringListe();
+
+    /*!
+     *  \brief retourne la liste des chemins des fichiers listés
+     *  \return le tableau de std::string/chemins des fichiers listés
+     *
+     *  Fonction qui retourne la liste des fichiers
+     *
+     */
+        std::list <std::string> getStringListe();
 
 
      //** @TODO une autre methode pour recup un par un les nom de fic ? **/
 
     private :
-        std::string * listeFichiers;
+        void listerDossier(QString nomDossier);
+        QFileInfoList listeFichiers;
 //        std::string temp; /*!< ligne temporaire qui est lue dans le fichier */
 //        std::ifstream fluxFic; /*!< descripteur de fichier ouvert en lecture */
 
