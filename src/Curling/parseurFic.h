@@ -46,7 +46,7 @@ class parseurFic {
      *  Fonction qui retourne les url lues dans un fichier au préalable
      *
      */
-        void getUrls(); //** TODO cette fonction doit retourner une structure/tableau d'url **/
+        QStringList getUrls(); //** TODO cette fonction doit retourner une structure/tableau d'url **/
 
       /*!
       *  \brief test les url avec wget
@@ -60,6 +60,7 @@ class parseurFic {
         std::string temp; /*!< ligne temporaire qui est lue dans le fichier */
         std::ifstream fluxFic; /*!< descripteur de fichier ouvert en lecture */
         urlValidator testeurURL;
+        QStringList listeURL;
 };
 
 

@@ -13,7 +13,8 @@ public:
     ~Vue();
 
 signals:
-
+    void ouvrirClicked();
+    void testerClicked();
 
 public slots:
     void clearText();
@@ -22,7 +23,7 @@ public slots:
     void setMaxProgression(int maximum);
 
 private :
-    QPushButton quitter,ouvrirFic,ouvrirDossier,tester;
+    QPushButton quitter,ouvrir,tester;
     QProgressBar progression;
     QLabel chemin;
     QTextEdit zoneTexte;

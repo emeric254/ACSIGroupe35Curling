@@ -18,10 +18,7 @@ bool urlValidator::testVie(std::string pURL){
     QString chaine("wget --spider --no-check-certificate "); // construction de la commande de base
     chaine.append(pURL.data()); // on y concatene l'url
 
-    wget.start(chaine.toStdString().data()); // on lance execute la commande
-
-//    cout << " " << test.exitCode(); // juste pour debug
-//    cout << " " << test.exitStatus(); // juste pour debug
+    wget.start(chaine.toStdString().data()); // on execute la commande
 
     wget.waitForFinished();
 

@@ -19,9 +19,11 @@ SOURCES += main.cpp \
            parseurFic.cpp \
            listeurFic.cpp \
     urlvalidator.cpp \
-    vue.cpp
+    vue.cpp \
+    controlvue.cpp
 
 HEADERS += parseurFic.h \
            listeurFic.h \
     urlvalidator.h \
-    vue.h
+    vue.h \
+    controlvue.h
