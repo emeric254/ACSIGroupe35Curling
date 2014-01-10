@@ -1,7 +1,6 @@
 #ifndef CONTROLVUE_H
 #define CONTROLVUE_H
 
-#include "vue.h"
 #include "listeurFic.h"
 #include "parseurFic.h"
 #include "urlvalidator.h"
@@ -14,11 +13,10 @@ public:
     void listerDossier();
     void testerFic();
     void testerDossier();
-    void tester();
+    void tester(QTextEdit * zonetexte);
     void parcourir();
 
 private:
-    Vue fenetre;
     QFileInfo selection;
     listeurFic listeur;
     parseurFic parseur;

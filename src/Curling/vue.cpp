@@ -15,7 +15,7 @@ Vue::Vue(QWidget *parent) : QMainWindow(parent)
     progression.setParent(this);
 
     // layout fixe :
-    progression.setGeometry(0,0,640,20);
+    progression.setGeometry(0,0,640,40);
     zoneTexte.setGeometry(0,40,640,400);
 
     quitter.setGeometry(0,440,160,40);
@@ -26,10 +26,11 @@ Vue::Vue(QWidget *parent) : QMainWindow(parent)
     quitter.setText("Quitter");
     ouvrir.setText("Parcourir");
     tester.setText("Tester");
+    zoneTexte.setReadOnly(true);
 
     connect(&quitter,SIGNAL(clicked()),this,SLOT(close()));
-    connect(&ouvrir,SIGNAL(clicked()),this,SIGNAL(ouvrirClicked()));
-    connect(&tester,SIGNAL(clicked()),this,SIGNAL(testerClicked()));
+    connect(&ouvrir,SIGNAL(clicked()),this,SLOT(parcourirAppuyer()));
+    connect(&tester,SIGNAL(clicked()),this,SLOT(testerAppuyer()));
 }
 
 Vue::~Vue(){}
@@ -42,12 +43,14 @@ void Vue::addLigne(QString ligne){
     zoneTexte.append(ligne);
 }
 
-void Vue::setCurProgression(int progress){
-    progression.setValue(progress);
+void Vue::parcourirAppuyer(){
+    controlleur.parcourir();
 }
 
-void Vue::setMaxProgression(int maximum){
-    progression.setMaximum(maximum);
+void Vue::testerAppuyer(){
+    progression.setText(" Veuillez patienter ... ");
+    this->setEnabled(false);
+    controlleur.tester(&zoneTexte);
+    this->setEnabled(true);
+    progression.setText(" Finis !");
 }
-
-

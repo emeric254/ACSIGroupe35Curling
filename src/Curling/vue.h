@@ -3,6 +3,7 @@
 
 #include <QtCore>
 #include <QtGui/QtGui>
+#include "controlvue.h"
 
 class Vue : public QMainWindow
 {
@@ -12,21 +13,17 @@ public:
     explicit Vue(QWidget *parent = 0);
     ~Vue();
 
-signals:
-    void ouvrirClicked();
-    void testerClicked();
-
 public slots:
     void clearText();
     void addLigne(QString ligne);
-    void setCurProgression(int progress);
-    void setMaxProgression(int maximum);
+    void parcourirAppuyer();
+    void testerAppuyer();
 
 private :
     QPushButton quitter,ouvrir,tester;
-    QProgressBar progression;
-    QLabel chemin;
+    QLabel progression, chemin;
     QTextEdit zoneTexte;
+    controlVue controlleur;
 
 };
 

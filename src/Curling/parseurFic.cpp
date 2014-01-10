@@ -9,21 +9,29 @@ void parseurFic::lireFic(string nomFic)
 
     if(fluxFic) // si bien ouvert
     {
+        cout << endl << nomFic << " : " << endl;
+
+        listeURL.append(QString(nomFic.append(" : ").data()));
+
       while ( getline(fluxFic, temp) ) {
-          cout << temp ;
 
         // ---- traitement :
 
           if(testeurURL.testStruct(temp)){ // test de validité de sa structure
               if(testeurURL.testVie(temp))
-                  cout << "  OK, l'url fonctionne" << endl;
+                  temp.append(" OK :)");
               else
-                  cout << "  NOK, l'url ne fonctionne pas ! " << endl;
+                  temp.append(" NOK :(");
+
+              cout << temp << endl;
+
 
               listeURL.append(QString(temp.data()));
           }
+          /*
           else
-              cout << "  NOK, ce n'est pas une url ! " << endl;
+              cout << temp << "  NOK, ce n'est pas une url ! " << endl;
+          */
 
       }
       fluxFic.close();
@@ -34,14 +42,4 @@ void parseurFic::lireFic(string nomFic)
 
 QStringList parseurFic::getUrls(){
     return listeURL;
-}
-
-void parseurFic::testUrls(){
-// for each url in tabURL > testURL
-/*
-    if(testeurURL.testVie(temp))
-        cout << "  OK, l'url fonctionne" << endl;
-    else
-        cout << "  NOK, l'url ne fonctionne pas ! " << endl;
-*/
 }

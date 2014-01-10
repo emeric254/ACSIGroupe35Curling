@@ -1,15 +1,14 @@
 ACSIGroupe35Curling
 ===================
 
+Binaires précompilés disponibles dans le dossier : "build"
 
-sujet curling pour la methode agile assigné au groupe 3.5 en ACSI
-
-Binaires disponibles dans le dossier : "build"
+Versions Linux et Mac Os disponibles
 
 
-les differents dossiers :
+arborescence du dépôt :
 - "src" contient les sources !
-- "doc" contient la documentation (en plusieur formats) !
-- "test" contient les fichiers d'entrées / sorties pour les tests xD
-- "build" contient les binaires precompilés classés par O/S
+- "doc" contient la documentation (differents formats) !
+- "test" contient les fichiers d'entrées / sorties pour des tests
+- "build" contient les binaires precompilés classés dans des sous dossiers par O/S
 

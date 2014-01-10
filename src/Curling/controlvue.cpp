@@ -1,32 +1,33 @@
 #include "controlvue.h"
 
-controlVue::controlVue(){
-    fenetre.show();
-    // manque connections entre event et actions
-//    QApplication::connect(&fenetre,SIGNAL(ouvrirClicked()),this,SLOT(parcourir()));
-}
+controlVue::controlVue(){}
 
 void controlVue::listerDossier(){
-    listeur.lister(selection.absolutePath().toStdString());
+    listeur.lister(selection.absoluteFilePath().toStdString());
 }
 
-void controlVue::tester(){
+void controlVue::tester(QTextEdit * zonetexte){
     if(selection.isDir())
         testerDossier();
     else
-        testerFic();
+        if(selection.isFile())
+            testerFic();
+
+    foreach(QString temp, parseur.getUrls())
+        zonetexte->append(temp);
 }
 
 void controlVue::testerDossier(){
+    foreach( std::string fichier, listeur.getStringListe())
+        parseur.lireFic(fichier);
 }
 
 void controlVue::testerFic(){
     parseur.lireFic(selection.absolutePath().toStdString());
-    parseur.testUrls();
 }
 
 void controlVue::parcourir(){
-    selection.setFile(QFileDialog::getExistingDirectory(&fenetre));
+    selection.setFile(QFileDialog::getExistingDirectory());
     if(selection.isDir())
         listerDossier();
 }
