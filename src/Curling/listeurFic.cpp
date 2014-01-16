@@ -5,6 +5,7 @@ using namespace std; // pour éviter d'écrire 'std::' à chaque fois
 
 void listeurFic::lister(string nomDossier)
 {
+    listeFichiers.clear();
     QFileInfo fi(QString(nomDossier.data()));
 
     if(!fi.isDir())

@@ -6,13 +6,15 @@ void controlVue::listerDossier(){
     listeur.lister(selection.absoluteFilePath().toStdString());
 }
 
-void controlVue::tester(QTextEdit * zonetexte){
+void controlVue::tester(QTextEdit *zonetexte){
+    zonetexte->clear();
     if(selection.isDir())
         testerDossier();
     else
         if(selection.isFile())
             testerFic();
 
+    zonetexte->clear();
     foreach(QString temp, parseur.getUrls())
         zonetexte->append(temp);
 }
@@ -23,11 +25,14 @@ void controlVue::testerDossier(){
 }
 
 void controlVue::testerFic(){
-    parseur.lireFic(selection.absolutePath().toStdString());
+    parseur.lireFic(selection.absoluteFilePath().toStdString());
 }
 
-void controlVue::parcourir(){
-    selection.setFile(QFileDialog::getExistingDirectory());
-    if(selection.isDir())
-        listerDossier();
+void controlVue::parcourir(QWidget *vue){
+    selection.setFile(QFileDialog::getOpenFileName(vue));
+}
+
+void controlVue::parcourirDossier(QWidget *vue){
+    selection.setFile(QFileDialog::getExistingDirectory(vue));
+    listerDossier();
 }

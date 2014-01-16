@@ -9,15 +9,15 @@
  *
  * classe gérant les tests appliqués à une URL
  */
+
 #include <QRegExp>
 #include <QtCore>
 
 /*!
    * \class urlValidator
-   * \brief classe représentant le valideur d(e fichier d'URL
+   * \brief classe représentant le valideur de fichier d'URL
    *
    * classe gérant les tests appliqués à une URL
-   *
    */
 class urlValidator
 {
@@ -30,9 +30,18 @@ public:
  *
  *  Fonction qui test si l'URL est bien construite et structurée
  *  grace à une expression régulière
- *
  */
     bool testStruct(std::string pURL);
+
+/*!
+ *  \brief test si une url est contenue dans cette chaine
+ *  \param pURL : la chaine de caractere
+ *  \return string : retourne une url si trouvée, ou NULL
+ *
+ *  Fonction qui cherche si une URL n'est pas contenue
+ *  dans cette chaine de caractere
+ */
+    std::string chercheStruct(std::string pURL);
 
 /*!
  *  \brief retourne les url lues
@@ -42,13 +51,12 @@ public:
  *  Fonction qui test si l'URL est bien vivante et accessible
  *  grace à une utilisation d'une commande utilisant "wget"
  *  (mode "--spider")
- *
  */
-    bool testVie(std::string pURL); //** TODO cette fonction doit retourner une structure/tableau d'url **/
+    bool testVie(std::string pURL);
 
 private :
     QRegExp rx; /*!< l'expression reguliere */
-    QProcess wget;
+    QProcess wget; /*!< le processus où le wget s'executera */
 };
 
 #endif // URLVALIDATOR_H

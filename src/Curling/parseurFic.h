@@ -8,8 +8,6 @@
  * \date 11.12.2013
  *
  * classe gérant la lecture depuis un fichier à la recherche d'url
- * stockées dans  TODO
- *
  */
 
 #include <iostream>
@@ -23,8 +21,6 @@
    * \brief classe représentant le parseur de fichier
    *
    * classe gérant la lecture depuis un fichier à la recherche d'url
-   * stockées dans  TODO
-   *
    */
 class parseurFic {
 
@@ -34,8 +30,7 @@ class parseurFic {
      *  \brief lis le fichier et y prend les url
      *  \param nomFic : le fichier a lire
      *
-     *  Méthode qui lis le fichier passé en paramètre et accumule les url qu'il en trouve
-     *
+     *  Méthode qui lis le fichier passé en paramètre et accumule les url qu'il y trouve
      */
         void lireFic(std::string nomFic);
 
@@ -44,23 +39,21 @@ class parseurFic {
      *  \return le tableau d'url
      *
      *  Fonction qui retourne les url lues dans un fichier au préalable
-     *
      */
-        QStringList getUrls(); //** TODO cette fonction doit retourner une structure/tableau d'url **/
+        QStringList getUrls();
 
       /*!
       *  \brief test les url avec wget
       *
-      *  Fonction qui test les url lues avec wget
-      *
+      *  Fonction qui test les url lues
       */
         void testUrls();
 
     private :
         std::string temp; /*!< ligne temporaire qui est lue dans le fichier */
         std::ifstream fluxFic; /*!< descripteur de fichier ouvert en lecture */
-        urlValidator testeurURL;
-        QStringList listeURL;
+        urlValidator testeurURL; /*!< le testeur d'url */
+        QStringList listeURL; /*!< liste des url trouvées */
 };
 
 

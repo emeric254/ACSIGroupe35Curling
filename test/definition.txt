@@ -3,7 +3,7 @@
 :asciidoc: http://www.methods.co.nz/asciidoc[AsciiDoc]indexterm:[AsciiDoc]
 :dasciidoc: http://www.methods.co.nz/asciidoc[d'AsciiDoc]indexterm:[AsciiDoc]
 :artisan: http://www.artisansw.com/[Artisan]
-:cdo: http://www.eclipse.org/cdo/[CDO]
+:cdo: http://www.eclipse.org/cdo/
 :deckjsite: http://houqp.github.io/asciidoc-deckjs/[deckjs]
 :doors: http://www-03.ibm.com/software/products/fr/fr/ratidoor/[DOORS(TM)]
 :ea: http://www.sparxsystems.com.au/products/mdg/tech/sysml/index.html[Enterprise Architect]

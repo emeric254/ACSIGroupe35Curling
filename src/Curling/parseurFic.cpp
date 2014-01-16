@@ -5,6 +5,7 @@ using namespace std; // pour éviter d'écrire 'std::' à chaque fois
 
 void parseurFic::lireFic(string nomFic)
 {
+    listeURL.clear();
     fluxFic.open(nomFic.c_str()); // ouverture du fichier de nom contenu dans 'nomFic'
 
     if(fluxFic) // si bien ouvert
@@ -28,10 +29,16 @@ void parseurFic::lireFic(string nomFic)
 
               listeURL.append(QString(temp.data()));
           }
-          /*
-          else
-              cout << temp << "  NOK, ce n'est pas une url ! " << endl;
-          */
+          else {
+              temp = testeurURL.chercheStruct(temp.data());
+              if(!temp.empty()) {
+                  if(testeurURL.testVie(temp))
+                      temp.append(" OK :)");
+                  else
+                      temp.append(" NOK :(");
+                  cout << temp << endl;
+              }
+          }
 
       }
       fluxFic.close();
