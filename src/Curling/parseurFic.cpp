@@ -5,7 +5,6 @@ using namespace std; // pour éviter d'écrire 'std::' à chaque fois
 
 void parseurFic::lireFic(string nomFic)
 {
-    listeURL.clear();
     fluxFic.open(nomFic.c_str()); // ouverture du fichier de nom contenu dans 'nomFic'
 
     if(fluxFic) // si bien ouvert
@@ -37,6 +36,7 @@ void parseurFic::lireFic(string nomFic)
                   else
                       temp.append(" NOK :(");
                   cout << temp << endl;
+                  listeURL.append(QString(temp.data()));
               }
           }
 
@@ -49,4 +49,8 @@ void parseurFic::lireFic(string nomFic)
 
 QStringList parseurFic::getUrls(){
     return listeURL;
+}
+
+void parseurFic::clear(){
+    listeURL.clear();
 }

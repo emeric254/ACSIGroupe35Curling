@@ -7,6 +7,7 @@ void controlVue::listerDossier(){
 }
 
 void controlVue::tester(QTextEdit *zonetexte){
+    parseur.clear();
     zonetexte->clear();
     if(selection.isDir())
         testerDossier();
@@ -14,7 +15,6 @@ void controlVue::tester(QTextEdit *zonetexte){
         if(selection.isFile())
             testerFic();
 
-    zonetexte->clear();
     foreach(QString temp, parseur.getUrls())
         zonetexte->append(temp);
 }

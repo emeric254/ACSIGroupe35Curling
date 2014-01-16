@@ -49,6 +49,14 @@ class parseurFic {
       */
         void testUrls();
 
+
+        /*!
+        *  \brief nettoie la liste
+        *
+        *  nettoie la liste
+        */
+          void clear();
+
     private :
         std::string temp; /*!< ligne temporaire qui est lue dans le fichier */
         std::ifstream fluxFic; /*!< descripteur de fichier ouvert en lecture */
