@@ -1,0 +1,84 @@
+.TH "Vue" 3 "Thu Jan 16 2014" "ACSIGroupe35Curling" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Vue \- 
+.PP
+classe représentant la vue principale  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <vue\&.h>\fP
+.PP
+Inherits QMainWindow\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBclearText\fP ()"
+.br
+.RI "\fIvide 'zoneTexte' \fP"
+.ti -1c
+.RI "void \fBaddLigne\fP (QString ligne)"
+.br
+.RI "\fIajoute une ligne a 'zoneTexte' \fP"
+.ti -1c
+.RI "void \fBparcourirAppuyer\fP ()"
+.br
+.RI "\fIappelée sur pression de 'parcourir' \fP"
+.ti -1c
+.RI "void \fBparcourirDossierAppuyer\fP ()"
+.br
+.RI "\fIappelée sur pression de 'parcourirDossier' \fP"
+.ti -1c
+.RI "void \fBtesterAppuyer\fP ()"
+.br
+.RI "\fIappelée sur pression de 'tester' \fP"
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBVue\fP (QWidget *parent=0)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+classe représentant la vue principale 
+
+classe gérant la vue principale 
+.SH "Member Function Documentation"
+.PP 
+.SS "void Vue::addLigne (QStringligne)\fC [slot]\fP"
+
+.PP
+ajoute une ligne a 'zoneTexte' 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIligne\fP : le QString a ajouter en fin de 'zoneTexte'
+.RE
+.PP
+Fonction qui ajoute une ligne (QString) à la fin de 'zoneTexte' 
+.SS "void Vue::clearText ()\fC [slot]\fP"
+
+.PP
+vide 'zoneTexte' Fonction qui vide 'zoneTexte' 
+.SS "void Vue::parcourirAppuyer ()\fC [slot]\fP"
+
+.PP
+appelée sur pression de 'parcourir' Fonction appelée lorsque le boutons 'parcourir' est appuyé 
+.SS "void Vue::parcourirDossierAppuyer ()\fC [slot]\fP"
+
+.PP
+appelée sur pression de 'parcourirDossier' Fonction appelée lorsque le boutons 'parcourirDossier' est appuyé 
+.SS "void Vue::testerAppuyer ()\fC [slot]\fP"
+
+.PP
+appelée sur pression de 'tester' Fonction appelée lorsque le boutons 'tester' est appuyé 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ACSIGroupe35Curling from the source code\&.

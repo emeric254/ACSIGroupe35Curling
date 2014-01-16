@@ -1,0 +1,88 @@
+.TH "listeurFic" 3 "Thu Jan 16 2014" "ACSIGroupe35Curling" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+listeurFic \- 
+.PP
+classe \fBlisteurFic\fP  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <listeurFic\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBlister\fP (std::string nomDossier)"
+.br
+.RI "\fIliste les fichiers d'un dossier \fP"
+.ti -1c
+.RI "QFileInfoList \fBgetListe\fP ()"
+.br
+.RI "\fIretourne la liste des fichiers listés \fP"
+.ti -1c
+.RI "QStringList \fBgetQStringListe\fP ()"
+.br
+.RI "\fIretourne la liste des chemins des fichiers listés \fP"
+.ti -1c
+.RI "std::list< std::string > \fBgetStringListe\fP ()"
+.br
+.RI "\fIretourne la liste des chemins des fichiers listés \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+classe \fBlisteurFic\fP 
+
+classe gérant les fichiers 
+.SH "Member Function Documentation"
+.PP 
+.SS "QFileInfoList listeurFic::getListe ()"
+
+.PP
+retourne la liste des fichiers listés 
+.PP
+\fBReturns:\fP
+.RS 4
+la liste des fichiers listés
+.RE
+.PP
+Fonction qui retourne la liste des fichiers 
+.SS "QStringList listeurFic::getQStringListe ()"
+
+.PP
+retourne la liste des chemins des fichiers listés 
+.PP
+\fBReturns:\fP
+.RS 4
+le tableau des QString /chemins des fichiers listés
+.RE
+.PP
+Fonction qui retourne la liste des fichiers 
+.SS "list< string > listeurFic::getStringListe ()"
+
+.PP
+retourne la liste des chemins des fichiers listés 
+.PP
+\fBReturns:\fP
+.RS 4
+le tableau de std::string /chemins des fichiers listés
+.RE
+.PP
+Fonction qui retourne la liste des fichiers 
+.SS "void listeurFic::lister (std::stringnomDossier)"
+
+.PP
+liste les fichiers d'un dossier 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInomDossier\fP : le fichier a lire
+.RE
+.PP
+Méthode qui liste les fichiers dans un dossier dont le nom est donné en paramètre (nomDossier) 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ACSIGroupe35Curling from the source code\&.

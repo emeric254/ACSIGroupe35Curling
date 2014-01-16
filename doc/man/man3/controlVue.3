@@ -1,0 +1,104 @@
+.TH "controlVue" 3 "Thu Jan 16 2014" "ACSIGroupe35Curling" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+controlVue \- 
+.PP
+classe représentant le controleur principal  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <controlvue\&.h>\fP
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBlisterDossier\fP ()"
+.br
+.RI "\fIlister le dossier \fP"
+.ti -1c
+.RI "void \fBtesterFic\fP ()"
+.br
+.RI "\fIfonction qui test le fichier choisis \fP"
+.ti -1c
+.RI "void \fBtesterDossier\fP ()"
+.br
+.RI "\fIfonction qui test le dossier choisis \fP"
+.ti -1c
+.RI "void \fBtester\fP (QTextEdit *zonetexte)"
+.br
+.RI "\fIajoute une ligne a 'zoneTexte' \fP"
+.ti -1c
+.RI "void \fBparcourir\fP (QWidget *vue)"
+.br
+.RI "\fIouvre une fenetre de choix de fichier \fP"
+.ti -1c
+.RI "void \fBparcourirDossier\fP (QWidget *vue)"
+.br
+.RI "\fIouvre une fenetre de choix de dossier \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+classe représentant le controleur principal 
+
+classe controleur 
+.SH "Member Function Documentation"
+.PP 
+.SS "void controlVue::listerDossier ()\fC [slot]\fP"
+
+.PP
+lister le dossier Fonction qui liste le dossier choisis 
+.SS "void controlVue::parcourir (QWidget *vue)\fC [slot]\fP"
+
+.PP
+ouvre une fenetre de choix de fichier 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvue\fP : un pointeur vers la vue
+.RE
+.PP
+Fonction qui ouvre une fenetre de dialogue pour choisir un fichier 
+.SS "void controlVue::parcourirDossier (QWidget *vue)\fC [slot]\fP"
+
+.PP
+ouvre une fenetre de choix de dossier 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvue\fP : un pointeur vers la vue
+.RE
+.PP
+Fonction qui ouvre une fenetre de dialogue pour choisir un dossier 
+.SS "void controlVue::tester (QTextEdit *zonetexte)\fC [slot]\fP"
+
+.PP
+ajoute une ligne a 'zoneTexte' 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIzonetexte\fP : un pointeur vers 'zoneTexte' de la vue
+.RE
+.PP
+Fonction qui test les urls et ecris ensuite le resultat de ce(s) test(s) dans zonetexte (dans la vue) 
+.SS "void controlVue::testerDossier ()\fC [slot]\fP"
+
+.PP
+fonction qui test le dossier choisis 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIligne\fP : le QString a ajouter en fin de 'zoneTexte'
+.RE
+.PP
+Fonction qui test tous les fichiers de l'arborescence contenue dans le dossier choisis 
+.SS "void controlVue::testerFic ()\fC [slot]\fP"
+
+.PP
+fonction qui test le fichier choisis Fonction qui test le fichier choisis 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ACSIGroupe35Curling from the source code\&.

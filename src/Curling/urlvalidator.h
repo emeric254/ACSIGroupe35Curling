@@ -2,7 +2,7 @@
 #define URLVALIDATOR_H
 
 /**
- * \file urlValidator.h
+ * \file urlvalidator.h
  * \brief Valideur d'URL
  * \author E.Tosi
  * \date 20.12.2013
@@ -19,8 +19,8 @@
    *
    * classe gérant les tests appliqués à une URL
    */
-class urlValidator
-{
+class urlValidator {
+
 public:
 
 /*!

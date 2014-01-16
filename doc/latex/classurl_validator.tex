@@ -1,0 +1,92 @@
+\hypertarget{classurl_validator}{\section{url\-Validator Class Reference}
+\label{classurl_validator}\index{url\-Validator@{url\-Validator}}
+}
+
+
+classe représentant le valideur de fichier d'U\-R\-L  
+
+
+
+
+{\ttfamily \#include $<$urlvalidator.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classurl_validator_a337a9edaa44e76bda5a7ed3a345b0b78}{test\-Struct} (std\-::string p\-U\-R\-L)
+\begin{DoxyCompactList}\small\item\em test si l'url est bien structurée \end{DoxyCompactList}\item 
+std\-::string \hyperlink{classurl_validator_ad1db717c70226f9f78edfe07aa549152}{cherche\-Struct} (std\-::string p\-U\-R\-L)
+\begin{DoxyCompactList}\small\item\em test si une url est contenue dans cette chaine \end{DoxyCompactList}\item 
+bool \hyperlink{classurl_validator_a9993e82ddcaf00c655e3ad9221a10232}{test\-Vie} (std\-::string p\-U\-R\-L)
+\begin{DoxyCompactList}\small\item\em retourne les url lues \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+classe représentant le valideur de fichier d'U\-R\-L 
+
+classe gérant les tests appliqués à une U\-R\-L 
+
+\subsection{Member Function Documentation}
+\hypertarget{classurl_validator_ad1db717c70226f9f78edfe07aa549152}{\index{url\-Validator@{url\-Validator}!cherche\-Struct@{cherche\-Struct}}
+\index{cherche\-Struct@{cherche\-Struct}!urlValidator@{url\-Validator}}
+\subsubsection[{cherche\-Struct}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string url\-Validator\-::cherche\-Struct (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{p\-U\-R\-L}
+\end{DoxyParamCaption}
+)}}\label{classurl_validator_ad1db717c70226f9f78edfe07aa549152}
+
+
+test si une url est contenue dans cette chaine 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-U\-R\-L} & \-: la chaine de caractere \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string \-: retourne une url si trouvée, ou N\-U\-L\-L
+\end{DoxyReturn}
+Fonction qui cherche si une U\-R\-L n'est pas contenue dans cette chaine de caractere \hypertarget{classurl_validator_a337a9edaa44e76bda5a7ed3a345b0b78}{\index{url\-Validator@{url\-Validator}!test\-Struct@{test\-Struct}}
+\index{test\-Struct@{test\-Struct}!urlValidator@{url\-Validator}}
+\subsubsection[{test\-Struct}]{\setlength{\rightskip}{0pt plus 5cm}bool url\-Validator\-::test\-Struct (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{p\-U\-R\-L}
+\end{DoxyParamCaption}
+)}}\label{classurl_validator_a337a9edaa44e76bda5a7ed3a345b0b78}
+
+
+test si l'url est bien structurée 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-U\-R\-L} & \-: la chaine de caractere representant l'U\-R\-L \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+booleen \-: Vrai si l'U\-R\-L est bien structurée, sinon Faux
+\end{DoxyReturn}
+Fonction qui test si l'U\-R\-L est bien construite et structurée grace à une expression régulière \hypertarget{classurl_validator_a9993e82ddcaf00c655e3ad9221a10232}{\index{url\-Validator@{url\-Validator}!test\-Vie@{test\-Vie}}
+\index{test\-Vie@{test\-Vie}!urlValidator@{url\-Validator}}
+\subsubsection[{test\-Vie}]{\setlength{\rightskip}{0pt plus 5cm}bool url\-Validator\-::test\-Vie (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{p\-U\-R\-L}
+\end{DoxyParamCaption}
+)}}\label{classurl_validator_a9993e82ddcaf00c655e3ad9221a10232}
+
+
+retourne les url lues 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-U\-R\-L} & \-: la chaine de caractere representant l'U\-R\-L \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+le tableau d'url
+\end{DoxyReturn}
+Fonction qui test si l'U\-R\-L est bien vivante et accessible grace à une utilisation d'une commande utilisant \char`\"{}wget\char`\"{} (mode \char`\"{}-\/-\/spider\char`\"{}) 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/toast/\-A\-C\-S\-I\-Groupe3\-Curling/\-A\-C\-S\-I\-Groupe35\-Curling/src/\-Curling/\hyperlink{urlvalidator_8h}{urlvalidator.\-h}\item 
+/home/toast/\-A\-C\-S\-I\-Groupe3\-Curling/\-A\-C\-S\-I\-Groupe35\-Curling/src/\-Curling/urlvalidator.\-cpp\end{DoxyCompactItemize}
