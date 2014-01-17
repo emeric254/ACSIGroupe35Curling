@@ -19,6 +19,7 @@ Usage :
 ./Curling [argument 1] [argument 2]
 
 argument 1 > "-c" pour tester un fichier, ou "-d" pour tester un dossier
+
 argument 2 > le chemin vers le fichier ou dossier
 
 
